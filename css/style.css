@@ -1,0 +1,105 @@
+:root {
+  --primary-font: "Chakra Petch", sans-serif;
+  --secondary-font: "JetBrains Mono", monospace;
+
+  --primary-bg: #f2f2f2;
+  --primary-color: #ff5a00;
+  --text-primary-color: #000000;
+}
+
+body {
+  height: 100vh;
+  font-family: var(--primary-font);
+  background-image: url("../img/bg-pattern.png");
+  background-color: var(--primary-bg);
+}
+
+.font-primary {
+  font-family: var(--primary-font);
+}
+.font-secondary {
+  font-family: var(--secondary-font);
+}
+.bg-accent {
+  background-color: var(--primary-color);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 0px;
+}
+
+.progress {
+  height: 8px;
+}
+.progress-bar {
+  background: -webkit-linear-gradient(left, #ff5a00 30%, #ff9f6b 50%, #ff5a00 100%) repeat;
+  -webkit-background-size: 50% 100%;
+  -webkit-animation-name: moving-gradient;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  border-radius: 50px;
+}
+@-webkit-keyframes moving-gradient {
+  0% {
+    background-position: right bottom;
+  }
+
+  100% {
+    background-position: left bottom;
+  }
+}
+
+#messagesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 10px;
+  gap: 10px;
+  height: 100vh;
+  max-height: 100%;
+  overflow-y: hidden;
+}
+
+.message {
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out, margin-bottom 0.5s ease-out;
+  margin-bottom: -1200px; /* Initially hidden */
+}
+
+.message.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  margin-bottom: 10px;
+}
+
+.message img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+/* =============================================================================
+MOBILE
+============================================================================= */
+.mobile-only {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  #messagesContainer {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: block !important;
+  }
+
+  body {
+    padding-top: 8rem;
+  }
+}
