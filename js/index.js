@@ -43,4 +43,4 @@ function addNewMessage() {
 addNewMessage();
 
 // Add messages every 3 seconds
-setInterval(addNewMessage, 2000);
+setInterval(addNewMessage, 4000);
