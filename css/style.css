@@ -84,6 +84,12 @@ body {
 
 .btn-link {
   color: var(--accent-pink);
+  border: none;
+  border-radius: 0px;
+}
+.btn-link:hover {
+  color: var(--accent-pink);
+  opacity: 0.8;
 }
 
 #messagesContainer {
