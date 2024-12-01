@@ -14,9 +14,8 @@
 body {
   height: 100vh;
   font-family: var(--primary-font);
-  /* background-color: var(--primary-bg); */
   background: rgb(65, 36, 99);
-  background-image: url("../img/bg-pattern.png"), radial-gradient(at top right, rgba(65, 36, 99, 1) 0%, rgba(21, 23, 34, 1) 40%);
+  background-image: url("../img/bg-pattern.png"), radial-gradient(at top right, rgba(65, 36, 99, 0.1) 0%, rgba(21, 23, 34, 1) 40%);
   background-size: 100px, auto;
   color: var(--text-primary-color);
 }
@@ -61,10 +60,26 @@ body {
 
 .btn-primary {
   background: rgb(240, 135, 254);
-  background: linear-gradient(90deg, rgba(240, 135, 254, 1) 0%, rgba(136, 52, 216, 1) 100%);
+  background: linear-gradient(90deg, rgba(240, 135, 254, 1) 0%, rgba(136, 52, 216, 1) 50%, rgba(240, 135, 254, 1) 100%);
   color: #fff;
   border: none;
   border-radius: 0px;
+  background-size: 200% auto;
+  background-position: left center;
+  transition: background-position 0.5s ease;
+}
+.btn-primary:hover {
+  background-position: right center;
+  animation: flow 0.3s ease-in-out;
+}
+
+@keyframes flow {
+  0% {
+    background-position: left center;
+  }
+  100% {
+    background-position: right center;
+  }
 }
 
 .btn-link {
