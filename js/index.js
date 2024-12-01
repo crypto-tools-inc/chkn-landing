@@ -1,5 +1,5 @@
 // Array of image URLs (replace with your actual image paths)
-const messageImages = ["img/slide-1.png", "img/slide-2.png", "img/slide-3.png"];
+const messageImages = ["img/slide-1-dark.png", "img/slide-2-dark.png", "img/slide-3-dark.png"];
 
 const messagesContainer = document.getElementById("messagesContainer");
 let currentImageIndex = 0;

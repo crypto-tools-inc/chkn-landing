@@ -1,17 +1,24 @@
 :root {
-  --primary-font: "Chakra Petch", sans-serif;
+  --primary-font: "Inter", sans-serif;
   --secondary-font: "JetBrains Mono", monospace;
 
-  --primary-bg: #f2f2f2;
+  --primary-bg: #151722;
   --primary-color: #ff5a00;
-  --text-primary-color: #000000;
+  --text-primary-color: #fff;
+  --text-secondary-color: #d0d0dc;
+
+  --accent-purple: #9a45ff;
+  --accent-pink: #f087fe;
 }
 
 body {
   height: 100vh;
   font-family: var(--primary-font);
-  background-image: url("../img/bg-pattern.png");
-  background-color: var(--primary-bg);
+  /* background-color: var(--primary-bg); */
+  background: rgb(65, 36, 99);
+  background-image: url("../img/bg-pattern.png"), radial-gradient(at top right, rgba(65, 36, 99, 1) 0%, rgba(21, 23, 34, 1) 40%);
+  background-size: 100px, auto;
+  color: var(--text-primary-color);
 }
 
 .font-primary {
@@ -20,37 +27,48 @@ body {
 .font-secondary {
   font-family: var(--secondary-font);
 }
+.text-secondary-color {
+  color: var(--text-secondary-color);
+}
+.text-gradient-purple {
+  background: -webkit-linear-gradient(0deg, rgba(240, 135, 254, 1), rgba(136, 52, 216, 1), rgba(240, 135, 254, 1));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: move-bg 1s infinite linear;
+}
+@keyframes move-bg {
+  to {
+    background-position: 200% center;
+  }
+}
+.small {
+  font-size: 0.75rem;
+}
 .bg-accent {
-  background-color: var(--primary-color);
+  background-color: var(--accent-purple);
+}
+
+.navbar {
+  backdrop-filter: blur(12px);
+}
+.nav-link {
+  color: var(--text-primary-color);
+}
+.nav-link:hover {
+  color: var(--accent-pink);
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
+  background: rgb(240, 135, 254);
+  background: linear-gradient(90deg, rgba(240, 135, 254, 1) 0%, rgba(136, 52, 216, 1) 100%);
   color: #fff;
   border: none;
   border-radius: 0px;
 }
 
-.progress {
-  height: 8px;
-}
-.progress-bar {
-  background: -webkit-linear-gradient(left, #ff5a00 30%, #ff9f6b 50%, #ff5a00 100%) repeat;
-  -webkit-background-size: 50% 100%;
-  -webkit-animation-name: moving-gradient;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  border-radius: 50px;
-}
-@-webkit-keyframes moving-gradient {
-  0% {
-    background-position: right bottom;
-  }
-
-  100% {
-    background-position: left bottom;
-  }
+.btn-link {
+  color: var(--accent-pink);
 }
 
 #messagesContainer {
