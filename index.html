@@ -7,13 +7,47 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,700;1,14..32,700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="vendors/bootstrap-5.3.2/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <nav class="navbar fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Dropdown </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- <nav class="navbar fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="img/logo.svg" alt="" height="40" />
@@ -24,12 +58,12 @@
           </li>
         </ul>
       </div>
-    </nav>
+    </nav> -->
     <div class="container h-100 d-flex align-items-center">
       <div class="row">
         <div class="col-md-7 d-flex align-items-center">
           <div>
-            <h1 class="font-primary">Master the game of Chicken</h1>
+            <h1 class="font-primary display-3 fw-bold">Master the game of Chicken</h1>
             <p class="font-secondary text-secondary-color mb-3">
               Track flows of token liquidity on Solana using CHKN spidermaps.<br />
               Chase down bundlers, ruggers, and cabals who outrun ordinary bundle bots and holder-based bubblemaps.
@@ -57,6 +91,122 @@
         </div>
       </div>
     </div>
+
+    <div class="container">
+      <section id="features">
+        <h2 class="display-5 fw-medium text-center mb-5">Features</h2>
+        <div class="row row-gap-4">
+          <div class="col-md-3">
+            <img class="mb-3" src="img/icon-feat-1.svg" alt="" width="48" height="48" />
+            <h5>Token Visualisation</h5>
+            <p class="font-secondary text-secondary-color">Generates detailed, real-time flowgraphs that map Solana token transactions, providing intuitive insights into liquidity patterns and market dynamics.</p>
+          </div>
+          <div class="col-md-3">
+            <img class="mb-3" src="img/icon-feat-2.svg" alt="" width="48" height="48" />
+            <h5>Advance Flow Analysis</h5>
+            <p class="font-secondary text-secondary-color">Leverages AI-powered scanning to identify suspicious trading patterns, market manipulations, and unusual token distribution strategies across DEXes and CEXes.</p>
+          </div>
+          <div class="col-md-3">
+            <img class="mb-3" src="img/icon-feat-3.svg" alt="" width="48" height="48" />
+            <h5>Visual Transaction Tracking</h5>
+            <p class="font-secondary text-secondary-color">Offers color-coded, interactive graphs displaying transaction types, wallet balances, transfer volumes, and key holder movements.</p>
+          </div>
+          <div class="col-md-3">
+            <img class="mb-3" src="img/icon-feat-4.svg" alt="" width="48" height="48" />
+            <h5>Market Risk Detection</h5>
+            <p class="font-secondary text-secondary-color">Provides specialized scans tracking token flows and launches to help users quickly detect potential trading anomalies and market risks.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="commands">
+        <h2 class="display-5 fw-medium text-center mb-5">Commands</h2>
+        <ul class="list-group list-group-flush col-12 col-md-6 offset-md-3">
+          <li class="list-group-item list-group-item-action">
+            <p class="font-secondary text-primary-color mb-0">/s &#60;ticker or token address&#62;</p>
+            <p class="text-secondary-color small mb-0">Generate a flowmap of current token balances and their transfers based on the last 6 hours of transfer data.</p>
+          </li>
+          <li class="list-group-item list-group-item-action">
+            <p class="font-secondary text-primary-color mb-0">/sa &#60;ticker or token address&#62;</p>
+            <p class="text-secondary-color small mb-0">Same as /s but includes AI-powered analysis of the token flows.</p>
+          </li>
+          <li class="list-group-item list-group-item-action">
+            <p class="font-secondary text-primary-color mb-0">/first &#60;ticker or token address&#62;</p>
+            <p class="text-secondary-color small mb-0">Generate a flowmap of the token balances and transfers after the first 5k transfers.</p>
+          </li>
+          <li class="list-group-item list-group-item-action">
+            <p class="font-secondary text-primary-color mb-0">/fa &#60;ticker or token address&#62;</p>
+            <p class="text-secondary-color small mb-0">Same as `/first` but includes AI-powered analysis of the token flows.</p>
+          </li>
+          <li class="list-group-item list-group-item-action">
+            <p class="font-secondary text-primary-color mb-0">/holders &#60;token address&#62;</p>
+            <p class="text-secondary-color small mb-0">Generate a list of the top holders of a token.</p>
+          </li>
+          <li class="list-group-item list-group-item-action">
+            <p class="font-secondary text-primary-color mb-0">/legend</p>
+            <p class="text-secondary-color small mb-0">A textual guide to interpreting CHKN flowmaps.</p>
+          </li>
+          <li class="list-group-item list-group-item-action">
+            <p class="font-secondary text-primary-color mb-0">/subscribe</p>
+            <p class="text-secondary-color small mb-0">Purchase a CHKN Computer subscription.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="pricing">
+        <h2 class="display-5 fw-medium text-center mb-5">Pricing</h2>
+        <div class="row gap-4">
+          <div class="col-md-4 offset-md-2">
+            <div class="card card-pricing">
+              <div class="card-body">
+                <h5 class="card-title">Single</h5>
+                <div class="d-flex flex-row align-items-center">
+                  <p class="display-4 font-secondary text-primary-color me-2 mb-0">1</p>
+                  <div class="d-flex flex-column">
+                    <p class="font-secondary text-secondary-color small mb-0">SOL</p>
+                    <p class="font-secondary text-secondary-color small mb-0">/month</p>
+                  </div>
+                </div>
+                <p class="text-secondary-color small">By purchasing a CHKN subscription, you get access to:</p>
+                <div class="mb-3">
+                  <p class="text-secondary-color small mb-2"><img src="img/check-small.svg" alt="" width="24" height="24" /> Liquidity flowmap</p>
+                  <p class="text-secondary-color small mb-2"><img src="img/check-small.svg" alt="" width="24" height="24" /> Activity data</p>
+                  <p class="text-secondary-color small mb-2"><img src="img/check-small.svg" alt="" width="24" height="24" /> All future features</p>
+                </div>
+                <div class="d-grid">
+                  <a href="" class="btn btn-outline-primary text-uppercase">choose this plan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-pricing">
+              <div class="card-body">
+                <h5 class="card-title">Group</h5>
+                <div class="d-flex flex-row align-items-center">
+                  <p class="display-4 font-secondary text-primary-color me-2 mb-0">10</p>
+                  <div class="d-flex flex-column">
+                    <p class="font-secondary text-secondary-color small mb-0">SOL</p>
+                    <p class="font-secondary text-secondary-color small mb-0">/month</p>
+                  </div>
+                </div>
+                <p class="text-secondary-color small">By purchasing a CHKN subscription, you get access to:</p>
+                <div class="mb-3">
+                  <p class="text-secondary-color small mb-2"><img src="img/check-small.svg" alt="" width="24" height="24" /> Liquidity flowmap</p>
+                  <p class="text-secondary-color small mb-2"><img src="img/check-small.svg" alt="" width="24" height="24" /> Activity data</p>
+                  <p class="text-secondary-color small mb-2"><img src="img/check-small.svg" alt="" width="24" height="24" /> All future features</p>
+                </div>
+                <div class="d-grid">
+                  <a href="" class="btn btn-outline-primary text-uppercase">choose this plan</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer></footer>
     <script src="vendors/bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>
   </body>

@@ -14,9 +14,10 @@
 body {
   height: 100vh;
   font-family: var(--primary-font);
-  background: rgb(65, 36, 99);
-  background-image: url("../img/bg-pattern.png"), radial-gradient(at top right, rgba(65, 36, 99, 0.1) 0%, rgba(21, 23, 34, 1) 40%);
+  background: var(--primary-bg);
+  background-image: url("../img/bg-pattern.png"), radial-gradient(at top right, rgb(65, 36, 99) 0%, rgba(21, 23, 34, 1) 40%);
   background-size: 100px, auto;
+  background-repeat: repeat, no-repeat;
   color: var(--text-primary-color);
 }
 
@@ -25,6 +26,9 @@ body {
 }
 .font-secondary {
   font-family: var(--secondary-font);
+}
+.text-primary-color {
+  color: var(--text-primary-color);
 }
 .text-secondary-color {
   color: var(--text-secondary-color);
@@ -48,6 +52,15 @@ body {
   background-color: var(--accent-purple);
 }
 
+section {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
+/* =============================================================================
+NAVBAR
+============================================================================= */
+
 .navbar {
   backdrop-filter: blur(12px);
 }
@@ -57,6 +70,10 @@ body {
 .nav-link:hover {
   color: var(--accent-pink);
 }
+
+/* =============================================================================
+BUTTONS
+============================================================================= */
 
 .btn-primary {
   background: rgb(240, 135, 254);
@@ -82,6 +99,19 @@ body {
   }
 }
 
+.btn-outline-primary {
+  border: 1px solid #f087fe;
+  border-radius: 0px;
+  color: #f087fe;
+  font-family: var(--secondary-font);
+}
+.btn-outline-primary:hover {
+  border: 1px solid #f087fe;
+  background: rgb(240, 135, 254);
+  background: linear-gradient(90deg, rgba(240, 135, 254, 1) 0%, rgba(136, 52, 216, 1) 100%);
+  color: var(--text-primary-color);
+}
+
 .btn-link {
   color: var(--accent-pink);
   border: none;
@@ -91,6 +121,10 @@ body {
   color: var(--accent-pink);
   opacity: 0.8;
 }
+
+/* =============================================================================
+MESSAGE BUBBLES
+============================================================================= */
 
 #messagesContainer {
   display: flex;
@@ -120,6 +154,56 @@ body {
 .message img {
   max-width: 100%;
   border-radius: 15px;
+}
+
+/* =============================================================================
+LIST
+============================================================================= */
+
+.list-group-item {
+  background-color: transparent;
+  border-color: #3d4157;
+  color: var(--text-primary-color);
+}
+
+.list-group-item-action {
+  background: linear-gradient(90deg, rgba(136, 52, 216, 0.4) 0%, rgba(136, 52, 216, 0) 100%);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-out;
+}
+
+.list-group-item-action:hover {
+  background-color: transparent;
+  background-size: 100% 100%;
+}
+
+/* =============================================================================
+CARDS
+============================================================================= */
+
+.card {
+  color: var(--text-primary-color);
+  border-radius: 0px;
+  border: 1px solid #3d4157;
+  background-color: rgba(40, 43, 57, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+.card-pricing {
+  filter: drop-shadow(0px 0px 0px #f087fe2e);
+  transition: filter 0.3s ease-in;
+}
+
+.card-pricing:hover {
+  filter: drop-shadow(0px 0px 82px #f087fe2e);
+  transition: filter 1.5s ease-in-out;
+}
+
+/* =============================================================================
+FOOTER
+============================================================================= */
+footer p {
 }
 
 /* =============================================================================
