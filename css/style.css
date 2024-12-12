@@ -71,6 +71,20 @@ NAVBAR
   color: var(--accent-pink);
 }
 
+.nav-link {
+  color: var(--accent-pink);
+}
+.nav-link:hover {
+  color: var(--accent-pink);
+  opacity: 0.8;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: var(--accent-pink);
+  border-radius: 0px;
+}
+
 /* =============================================================================
 BUTTONS
 ============================================================================= */
@@ -120,6 +134,17 @@ BUTTONS
 .btn-link:hover {
   color: var(--accent-pink);
   opacity: 0.8;
+}
+
+/* =============================================================================
+PILL REACTION
+============================================================================= */
+.pill-reaction {
+  width: fit-content;
+  gap: 2px;
+  padding: 3px 6px;
+  background-color: var(--accent-purple);
+  border-radius: 50px;
 }
 
 /* =============================================================================
