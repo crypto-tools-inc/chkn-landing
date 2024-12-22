@@ -204,6 +204,45 @@ LIST
 }
 
 /* =============================================================================
+ACCORDION
+============================================================================= */
+.accordion-item {
+  background-color: transparent;
+  border-color: #3d4157;
+}
+
+.accordion-button {
+  background-color: transparent;
+  border-color: #3d4157;
+  background: linear-gradient(90deg, rgba(136, 52, 216, 0.4) 0%, rgba(136, 52, 216, 0) 100%);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-out;
+}
+
+.accordion-button:hover {
+  background-color: transparent;
+  background-size: 100% 100%;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  background-size: 100% 100%;
+  color: var(--text-primary-color);
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button::after {
+  background-image: url("/img/plus.svg");
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("/img/minus.svg");
+}
+
+/* =============================================================================
 CARDS
 ============================================================================= */
 
