@@ -64,6 +64,10 @@ NAVBAR
 .navbar {
   backdrop-filter: blur(12px);
 }
+
+.nav-item {
+  margin-right: 1rem;
+}
 .nav-link {
   color: var(--text-primary-color);
 }
@@ -256,6 +260,40 @@ footer {
   left: 0;
   width: 100%;
   z-index: 2;
+}
+
+/* =============================================================================
+MODAL
+============================================================================= */
+.modal {
+  border-radius: 0;
+}
+
+.modal-header {
+  border: none;
+}
+
+.modal-footer {
+  border: none;
+}
+
+.modal-content {
+  background-color: var(--primary-bg);
+  border-radius: 0;
+}
+
+.btn-modal-close {
+  background-color: transparent;
+  border: none;
+}
+
+.list-number {
+  min-width: 28px;
+  min-height: 28px;
+  text-align: center;
+  border-radius: 50px;
+  border: dashed 2px var(--accent-pink);
+  color: var(--accent-pink);
 }
 
 /* =============================================================================

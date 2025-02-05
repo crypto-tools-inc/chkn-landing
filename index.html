@@ -103,6 +103,9 @@ Chase down bundlers, ruggers, and cabals who outrun ordinary bundle bots and hol
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M214.75,211.71l-62.6-98.38,61.77-67.95a8,8,0,0,0-11.84-10.76L143.24,99.34,102.75,35.71A8,8,0,0,0,96,32H48a8,8,0,0,0-6.75,12.3l62.6,98.37-61.77,68a8,8,0,1,0,11.84,10.76l58.84-64.72,40.49,63.63A8,8,0,0,0,160,224h48a8,8,0,0,0,6.75-12.29ZM164.39,208,62.57,48h29L193.43,208Z"></path></svg>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="https://t.me/chkn_computer_bot" class="nav-link btn btn-primary text-uppercase font-secondary" target="_blank"> start bot </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -117,15 +120,16 @@ Chase down bundlers, ruggers, and cabals who outrun ordinary bundle bots and hol
               Chase down bundlers, ruggers, and cabals who outrun ordinary bundle bots and holder-based bubblemaps.
             </p>
             <div class="d-flex align-items-center mb-4">
-              <p class="font-secondary text-gradient-purple mb-0 text-uppercase me-3">Max 100 spots available</p>
+              <p class="font-secondary text-gradient-purple mb-0 text-uppercase me-3">Max 1000 spots available</p>
               <!-- <span class="font-secondary mb-0 badge bg-accent">90/100</span> -->
             </div>
-            <a href="https://t.me/chkn_computer_bot" class="btn btn-primary btn-lg text-uppercase font-secondary" target="_blank">
+            <button class="btn btn-primary btn-lg text-uppercase font-secondary" data-bs-toggle="modal" data-bs-target="#trialModal">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M22.4393 4.62171L19.2705 19.5655C19.0315 20.6201 18.408 20.8826 17.5221 20.3858L12.694 16.828L10.3643 19.0686C10.1065 19.3264 9.89084 19.542 9.39396 19.542L9.74084 14.6248L18.6893 6.5389C19.0783 6.19202 18.6049 5.99983 18.0846 6.34671L7.02209 13.3123L2.25959 11.8217C1.22365 11.4983 1.2049 10.7858 2.47521 10.2889L21.1033 3.11233C21.9658 2.7889 22.7205 3.30452 22.4393 4.62171Z" fill="#FFE2D2" />
               </svg>
-              Launch on telegram
-            </a>
+              try for free
+            </button>
+
             <a href="https://docs.chkn.computer/" class="btn btn-link btn-lg text-uppercase font-secondary" target="_blank">read the docs</a>
             <p class="font-secondary small text-secondary-color text-uppercase mb-0 mt-2">available on</p>
             <img src="img/solana-logo.svg" alt="" height="20" />
@@ -354,6 +358,43 @@ Chase down bundlers, ruggers, and cabals who outrun ordinary bundle bots and hol
         <p class="font-secondary text-gradient-purple">Chicken.computer</p>
       </div>
     </footer>
+
+    <!-- Trial Modal -->
+    <div class="modal fade" id="trialModal" tabindex="-1" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header justify-content-between">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">How it works</h1>
+            <button type="button" class="btn-modal-close" data-bs-dismiss="modal" aria-label="Close">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path></svg>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex flex-row align-items-start gap-2">
+              <div class="list-number"><span>1</span></div>
+              <p class="font-secondary text-secondary-color">To start your free trial, click the button below to open the CHKN Computer Telegram bot.</p>
+            </div>
+            <div class="d-flex flex-row align-items-start gap-2 mb-3">
+              <div class="list-number"><span>2</span></div>
+              <p class="font-secondary text-secondary-color">Start the bot.</p>
+            </div>
+            <div class="d-flex flex-row align-items-start gap-2">
+              <div class="list-number"><span>3</span></div>
+              <p class="font-secondary text-secondary-color">Use any command like /s or /f + a contract address to get your first free scan.</p>
+            </div>
+            <div class="d-grid">
+              <a href="https://t.me/chkn_computer_bot" class="btn btn-primary btn-lg text-uppercase font-secondary" target="_blank">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.4393 4.62171L19.2705 19.5655C19.0315 20.6201 18.408 20.8826 17.5221 20.3858L12.694 16.828L10.3643 19.0686C10.1065 19.3264 9.89084 19.542 9.39396 19.542L9.74084 14.6248L18.6893 6.5389C19.0783 6.19202 18.6049 5.99983 18.0846 6.34671L7.02209 13.3123L2.25959 11.8217C1.22365 11.4983 1.2049 10.7858 2.47521 10.2889L21.1033 3.11233C21.9658 2.7889 22.7205 3.30452 22.4393 4.62171Z" fill="#FFE2D2" />
+                </svg>
+                start my free trial
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="vendors/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/bubble.js"></script>
