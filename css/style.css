@@ -1,22 +1,18 @@
 :root {
-  --primary-font: "Inter", sans-serif;
-  --secondary-font: "JetBrains Mono", monospace;
+  --primary-font: "Geist", sans-serif;
+  --secondary-font: "Geist Mono", monospace;
 
-  --primary-bg: #151722;
-  --primary-color: #ff5a00;
+  --primary-bg: #141212;
+  --primary-color: #f56d22;
   --text-primary-color: #fff;
   --text-secondary-color: #d0d0dc;
-
-  --accent-purple: #9a45ff;
-  --accent-pink: #f087fe;
 }
 
 body {
   height: 100vh;
   font-family: var(--primary-font);
   background: var(--primary-bg);
-  background-image: url("../img/bg-pattern.png"), radial-gradient(at top right, rgb(65, 36, 99) 0%, rgba(21, 23, 34, 1) 40%);
-  background-size: 100px, auto;
+  background-image: url("../img/bg-tile.svg");
   background-repeat: repeat, no-repeat;
   color: var(--text-primary-color);
 }
@@ -33,28 +29,20 @@ body {
 .text-secondary-color {
   color: var(--text-secondary-color);
 }
-.text-gradient-purple {
-  background: -webkit-linear-gradient(0deg, rgba(240, 135, 254, 1), rgba(136, 52, 216, 1), rgba(240, 135, 254, 1));
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: move-bg 1s infinite linear;
-}
-@keyframes move-bg {
-  to {
-    background-position: 200% center;
-  }
-}
 .small {
   font-size: 0.75rem;
-}
-.bg-accent {
-  background-color: var(--accent-purple);
 }
 
 section {
   padding-top: 8rem;
   padding-bottom: 8rem;
+}
+
+.dots {
+  background-image: url("../img/dots.png");
+}
+.dots h1 {
+  text-align: justify;
 }
 
 /* =============================================================================
@@ -71,84 +59,47 @@ NAVBAR
 .nav-link {
   color: var(--text-primary-color);
 }
-.nav-link:hover {
-  color: var(--accent-pink);
-}
-
-.nav-link {
-  color: var(--accent-pink);
-}
-.nav-link:hover {
-  color: var(--accent-pink);
-  opacity: 0.8;
-}
-
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-  background-color: var(--accent-pink);
-  border-radius: 0px;
-}
 
 /* =============================================================================
 BUTTONS
 ============================================================================= */
 
-.btn-primary {
-  background: rgb(240, 135, 254);
-  background: linear-gradient(90deg, rgba(240, 135, 254, 1) 0%, rgba(136, 52, 216, 1) 50%, rgba(240, 135, 254, 1) 100%);
-  color: #fff;
-  border: none;
-  border-radius: 0px;
-  background-size: 200% auto;
-  background-position: left center;
-  transition: background-position 0.5s ease;
-}
-.btn-primary:hover {
-  background-position: right center;
-  animation: flow 0.3s ease-in-out;
-}
-
-@keyframes flow {
-  0% {
-    background-position: left center;
-  }
-  100% {
-    background-position: right center;
-  }
-}
-
 .btn-outline-primary {
-  border: 1px solid #f087fe;
+  border: 1px solid var(--primary-color);
   border-radius: 0px;
-  color: #f087fe;
+  color: var(--primary-color);
   font-family: var(--secondary-font);
+  background: rgba(245, 109, 34, 0.1);
 }
 .btn-outline-primary:hover {
-  border: 1px solid #f087fe;
-  background: rgb(240, 135, 254);
-  background: linear-gradient(90deg, rgba(240, 135, 254, 1) 0%, rgba(136, 52, 216, 1) 100%);
-  color: var(--text-primary-color);
+  border: 1px solid var(--primary-color);
+  background: rgba(245, 109, 34, 0.2);
+  color: var(--primary-color);
 }
-
-.btn-link {
-  color: var(--accent-pink);
-  border: none;
-  border-radius: 0px;
+.btn-outline-primary:focus {
+  border: 1px solid var(--primary-color);
+  background: rgba(245, 109, 34, 0.3);
+  color: var(--primary-color);
 }
-.btn-link:hover {
-  color: var(--accent-pink);
-  opacity: 0.8;
+.btn-outline-primary:active {
+  border: 1px solid var(--primary-color);
+  background: rgba(245, 109, 34, 0.4);
+  color: var(--primary-color);
+  box-shadow: rgba(245, 109, 34, 0.2) 0px 0px 0px 4px;
 }
-
-/* =============================================================================
-PILL REACTION
-============================================================================= */
-.pill-reaction {
-  width: fit-content;
-  gap: 2px;
-  padding: 3px 6px;
-  background-color: var(--accent-purple);
-  border-radius: 50px;
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+  border: 1px solid var(--primary-color);
+  background: rgba(245, 109, 34, 0.4);
+  color: var(--primary-color);
+}
+.btn-outline-primary:disabled {
+  border: 1px solid var(--primary-color);
+  background: rgba(245, 109, 34, 0.05);
+  color: var(--primary-color);
 }
 
 /* =============================================================================
@@ -230,39 +181,6 @@ CARDS
 }
 
 /* =============================================================================
-FOOTER
-============================================================================= */
-
-footer {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background-image: url("../img/portal.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: bottom;
-}
-
-#bubbleContainer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.portal {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2;
-}
-
-/* =============================================================================
 MODAL
 ============================================================================= */
 .modal {
@@ -285,15 +203,6 @@ MODAL
 .btn-modal-close {
   background-color: transparent;
   border: none;
-}
-
-.list-number {
-  min-width: 28px;
-  min-height: 28px;
-  text-align: center;
-  border-radius: 50px;
-  border: dashed 2px var(--accent-pink);
-  color: var(--accent-pink);
 }
 
 /* =============================================================================
